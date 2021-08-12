@@ -1,44 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- Link to css -->
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- link to js -->
 
-  Bill
+    <script defer src="./script.js"></script>
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <header class="title">
+      <img src="/images/logo.svg" alt="" />
+    </header>
+    <div class="calculator">
+      <article class="main">
+        <div class="main__bill">
+          <h4>Bill</h4>
+          <small></small>
+          <div class="input">
+            <img src="./images/icon-dollar.svg" alt="" class="input__icon" />
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+            <input
+              type="number"
+              name="bill"
+              id="bill"
+              class="input__field"
+              placeholder="0"
+            />
+          </div>
+        </div>
+        <div class="main__tip">
+          <h4>Select Tip %</h4>
+          <div class="tips">
+            <button class="tip t" id="tip-1" onclick="calcTip(5,false)">
+              5%
+            </button>
+            <button class="tip t" id="tip-2" onclick="calcTip(10,false)">
+              10%
+            </button>
+            <button class="tip t" id="tip-3" onclick="calcTip(15,false)">
+              15%
+            </button>
+            <button class="tip t" id="tip-4" onclick="calcTip(25,false)">
+              25%
+            </button>
+            <button class="tip t" id="tip-5" onclick="calcTip(50,false)">
+              50%
+            </button>
+            <input
+              type="number"
+              name="customtip"
+              id="tip-6"
+              class="tip custom"
+              placeholder="Custom"
+              onclick="customTip()"
+            />
+          </div>
+        </div>
+        <div class="main__numofpeople">
+          <h4>Number of People</h4>
+          <small></small>
+          <div class="input">
+            <img src="./images/icon-person.svg" alt="" class="input__icon" />
 
-  Number of People
+            <input
+              type="number"
+              name="people"
+              class="input__field"
+              id="people"
+              placeholder="0"
+            />
+          </div>
+        </div>
+      </article>
+      <article class="display">
+        <div class="display__tip">
+          <div class="display__tip--text">
+            <h3>Tip amount</h3>
 
-  Tip Amount
-  / person
+            <h4>/ person</h4>
+          </div>
+          <div class="display__tip--amount">$0.00</div>
+        </div>
+        <div class="display__total">
+          <div class="display__total--text">
+            <h3>Total</h3>
 
-  Total
-  / person
+            <h4>/ person</h4>
+          </div>
+          <div class="display__total--amount">$0.00</div>
+        </div>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <button
+          class="reset"
+          onMouseOver="resetHoverBcg()"
+          onMouseOut="resetBcg()"
+        >
+          RESET
+        </button>
+      </article>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/ShubhamPitale" target="_blank"
+        >Shubham Pitale</a
+      >.
+    </div>
+  </body>
 </html>

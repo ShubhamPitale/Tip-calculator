@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+/*
+////////////////
+Global styles
+///////////////
+ */
+:root {
+  --clr-primary: hsl(172, 67%, 45%);
+  --clr-verydark: hsl(183, 100%, 15%);
+  --clr-dark-1: hsl(186, 14%, 43%);
+  --clr-dark-2: hsl(184, 14%, 56%);
+  --clr-light-1: hsl(185, 41%, 84%);
+  --clr-light-2: hsl(189, 41%, 97%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: #000;
+  --ff-primary: "Space Mono", monospace;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 1rem;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+  width: 100vw;
+  background-color: var(--clr-light-1);
+  color: var(--clr-light-2);
+  font-family: var(--ff-primary);
+}
+/* More global styles */
+/*
+////////////////
+Calculator
+///////////////
+ */
+.calculator {
+  background-color: var(--clr-white);
+  width: 100%;
+  color: var(--clr-dark-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: var(--radius);
+  padding-bottom: 1rem;
+  font-family: var(--ff-primary);
+}
+/*
+////////////////
+Main
+///////////////
+ */
+/* input */
+input[type="number"] {
+  text-align: right;
+}
+input[type="number"]:focus {
+  border: 2px solid var(--clr-primary);
+  outline-style: none;
+}
+.input img {
+  position: absolute;
+}
+.input {
+  width: 100%;
+}
+.input__icon {
+  padding: 15px;
+}
+.input__field {
+  width: 100%;
+  font-size: 2rem;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 1.5rem;
+  background-color: var(--clr-light-2);
+  color: var(--clr-dark-2);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.input__field::placeholder {
+  color: var(--clr-dark-2);
+  font-family: var(--ff-primary);
+}
+
+/* Error message */
+small {
+  float: right;
+
+  color: brown;
+}
+.input.success .input__field {
+  border: 2px solid var(--clr-primary);
+}
+.input.error .input__field {
+  border: 2px solid brown;
+}
+/* ////////////// */
+.main {
+  width: 90vw;
+  margin-top: 2rem;
+  padding: 0 1.25rem;
+  border-radius: var(--radius);
+  font-family: var(--ff-primary);
+}
+
+.main__tip {
+  margin-bottom: 1.5rem;
+}
+.tips {
+  display: grid;
+  grid-template-columns: 47% 47%;
+  gap: 1rem 1rem;
+  margin-top: 0.5rem;
+}
+.tips button {
+  padding: 0.75rem 0;
+  font-family: var(--ff-primary);
+}
+.tip {
+  background-color: var(--clr-verydark);
+  padding: 0.75rem 0;
+  text-align: center;
+  border-radius: 5px;
+  color: var(--clr-white);
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 700;
+  border: none;
+}
+.tip:hover {
+  color: var(--clr-verydark);
+  /*  This colour was not given in style guide*/
+  background-color: hsl(172, 77%, 71%);
+}
+.tip:focus {
+  background-color: hsl(172, 67%, 45%);
+  color: var(--clr-verydark);
+}
+
+/* Custom tip */
+.custom {
+  border: none;
+  text-align: center;
+  background-color: var(--clr-light-2);
+  font-family: var(--ff-primary);
+}
+.tips input {
+  text-align: center;
+  color: var(--clr-verydark);
+}
+.tips input:focus {
+  outline-color: var(--clr-primary);
+  background-color: var(--clr-light-2);
+}
+.tips input::placeholder {
+  color: var(--clr-dark-1);
+}
+.tips input:hover {
+  background-color: var(--clr-light-2);
+}
+/*
+////////////////
+Display
+///////////////
+ */
+.display {
+  background-color: var(--clr-verydark);
+  width: 90vw;
+  margin-top: 1rem;
+  padding: 0 1.25rem;
+  border-radius: var(--radius);
+  padding-top: 2.5rem;
+}
+.display__tip,
+.display__total {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2rem;
+  font-family: var(--ff-primary);
+}
+.display__tip h3,
+.display__total h3 {
+  color: white;
+}
+.display__tip h4,
+.display__total h4 {
+  color: var(--clr-light-1);
+}
+.display__tip--amount,
+.display__total--amount {
+  font-size: 2.5rem;
+  color: var(--clr-primary);
+  font-weight: 700;
+}
+.reset {
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  color: var(--clr-verydark);
+  /* Was not given this color */
+  background-color: hsl(182, 50%, 31%);
+  padding: 0.75rem 0;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+.reset:hover {
+  background-color: hsl(172, 77%, 71%);
+  color: var(--clr-verydark);
+}
+
+/*
+/////////////////////////////////
+*************
+Desktop view
+*************
+///////////////////////////////
+ */
+@media screen and (min-width: 600px) {
+  body {
+    margin-top: 5rem;
+  }
+  /* Title */
+  .title {
+    margin-bottom: 3.5rem;
+  }
+  /*
+////////////////
+Calculator
+///////////////
+ */
+  .calculator {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    padding: 2rem;
+  }
+  /*
+////////////////
+Main
+///////////////
+ */
+  .main {
+    width: 50%;
+    height: 100%;
+    margin-right: 3rem;
+    padding: 0 1.25rem;
+  }
+  .main__bill {
+    margin-bottom: 2rem;
+  }
+  .main__tip {
+    margin-bottom: 2rem;
+  }
+  .tips {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 1rem 1rem;
+    margin-top: 1.5rem;
+  }
+  .tip {
+    padding: 0.5rem 0;
+    text-align: center;
+
+    font-size: 1.5rem;
+  }
+  /* 
+ ////////////////
+Display
+///////////////
+ */
+
+  .display {
+    width: 50%;
+    height: 100%;
+    padding: 0 1.25rem;
+
+    padding-top: 4rem;
+  }
+  .display__tip,
+  .display__total {
+    width: 100%;
+    margin-bottom: 3.5rem;
+  }
+
+  .display__tip--amount,
+  .display__total--amount {
+    font-size: 3rem;
+  }
+  .reset {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.75rem 0;
+    margin-bottom: 2.5rem;
+    margin-top: 6rem;
+  }
+}
+/* preadded css */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 2rem 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
