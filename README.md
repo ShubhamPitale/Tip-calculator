@@ -34,7 +34,7 @@ Users should be able to:
 ## My process
 
 I have written a BLOG on what was my thought process while making this project from start to end.
-Do checkout! IT IS VALUE ADDING --> [End your TUTORIAL HELL by making this Tip Calculator.]()
+Do checkout! IT IS VALUE ADDING --> [End your TUTORIAL HELL by making this Tip Calculator.](https://shubhampitale.hashnode.dev/end-your-tutorial-hell-by-making-this-tip-calculator)
 
 ### Built with
 
