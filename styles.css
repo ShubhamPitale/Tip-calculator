@@ -35,7 +35,6 @@ body {
   color: var(--clr-light-2);
   font-family: var(--ff-primary);
 }
-/* More global styles */
 /*
 ////////////////
 Calculator
@@ -91,7 +90,6 @@ input[type="number"]:focus {
   color: var(--clr-dark-2);
   font-family: var(--ff-primary);
 }
-
 /* Error message */
 small {
   float: right;
@@ -146,7 +144,6 @@ small {
   background-color: hsl(172, 67%, 45%);
   color: var(--clr-verydark);
 }
-
 /* Custom tip */
 .custom {
   border: none;

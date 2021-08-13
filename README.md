@@ -28,13 +28,13 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://your-solution-url.com)
-- Live Site URL: [](https://your-live-site-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/tip-calculator-solution-html-css-and-javascript-2q3lfZnUx)
+- Live Site URL: [Live Site](https://tipcalculator-shubhampitale.netlify.app/)
 
 ## My process
 
 I have written a BLOG on what was my thought process while making this project from start to end.
-Do checkout! IT IS VALUE ADDING --> []()
+Do checkout! IT IS VALUE ADDING --> [End your TUTORIAL HELL by making this Tip Calculator.]()
 
 ### Built with
 
@@ -47,4 +47,4 @@ Do checkout! IT IS VALUE ADDING --> []()
 
 ## Author
 
-- Twitter - [@yourusername](https://www.twitter.com/pitale_shubh)
+- Twitter - [@pitale_shubh](https://www.twitter.com/pitale_shubh)
